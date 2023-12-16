@@ -1,56 +1,64 @@
 public class Customer {
 
-		public Customer(String name, String lastName, CreditCard creditCard) {
-				this(name,  lastName, (int)(Math.random() * 100), creditCard);
-		}
+    public Customer(String name, String lastName, CreditCard creditCard, ContactInfo contactInfo) {
+        this(name, lastName, (int) (Math.random() * 100), creditCard, contactInfo);
+    }
 
-		public Customer(String name,  String lastName, int customerNumber, CreditCard creditCard) {
-				this.name = name;
-				this.customerNumber = customerNumber;
-				this.lastName = lastName;
-				this.creditCard = creditCard;
-		}
+    public Customer(String name, String lastName, int customerNumber, CreditCard creditCard, ContactInfo contactInfo) {
+        this.name = name;
+        this.customerNumber = customerNumber;
+        this.lastName = lastName;
+        this.creditCard = creditCard;
+        this.contactInfo = contactInfo;
+    }
 
-		private String name;
+    private String name;
+    private int customerNumber;
+    private String lastName;
+    private CreditCard creditCard;
+    private ContactInfo contactInfo;
 
-		private int customerNumber;
-		private String lastName;
+    public String getName() {
+        return name;
+    }
 
-		private CreditCard creditCard;
+    public void setName(String name) {
+        this.name = name;
+    }
 
-		public String getName(){
-				return name;
-		}
+    public int getCustomerNumber() {
+        return customerNumber;
+    }
 
-		public void setName(String name){
-				this.name = name;
-		}
+    public void setCustomerNumber(int customerNumber) {
+        this.customerNumber = customerNumber;
+    }
 
-		public int getCustomerNumber() {
-				return customerNumber;
-		}
+    public String getLastName() {
+        return lastName;
+    }
 
-		public void setCustomerNumber(int customerNumber) {
-				this.customerNumber = customerNumber;
-		}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-		public String getLastName() {
-				return lastName;
-		}
+    public CreditCard getCreditCard() {
+        return creditCard;
+    }
 
-		public void setLastName(String lastName) {
-				this.lastName = lastName;
-		}
+    public void setCreditCard(CreditCard creditCard) {
+        this.creditCard = creditCard;
+    }
 
-		public CreditCard getCreditCard() {
-				return creditCard;
-		}
+    public ContactInfo getContactInfo() {
+        return contactInfo;
+    }
 
-		public void setCreditCard(CreditCard creditCard) {
-				this.creditCard = creditCard;
-		}
+    public void setContactInfo(ContactInfo contactInfo) {
+        this.contactInfo = contactInfo;
+    }
 
-		public void printName(){
-				System.out.println("Customer " + name);
-		}
+    public void printName() {
+        System.out.println("Customer " + name);
+    }
 }
